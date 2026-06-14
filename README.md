@@ -51,6 +51,9 @@ https://hub.docker.com/repositories/vechniyvrag
 ## Ответ 2
 
 
+<img width="1916" height="837" alt="задание 2" src="https://github.com/user-attachments/assets/98ffc7cd-7e82-4e1b-be62-17896ef66137" />
+
+
 
 ## Задача 3
 1. Воспользуйтесь docker help или google, чтобы узнать как подключиться к стандартному потоку ввода/вывода/ошибок контейнера "custom-nginx-t2".
