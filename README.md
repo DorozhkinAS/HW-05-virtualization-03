@@ -105,6 +105,47 @@ https://hub.docker.com/repositories/vechniyvrag
 
 ## Ответ 4
 
+<img width="1343" height="130" alt="4 1" src="https://github.com/user-attachments/assets/bf4b17da-4907-490d-a40b-8f4a8a13e3fe" />
+
+
+<img width="1703" height="580" alt="4 2" src="https://github.com/user-attachments/assets/90356dd1-dcb5-42a8-9c36-7a748727d246" />
+
+
+mkdir -p /home/it/docker-task4
+cd /home/it/docker-task4
+pwd
+
+docker run -d \
+  --name centos-t4 \
+  -v "$(pwd):/data" \
+  centos:7 \
+  sleep infinity
+
+docker run -d \
+  --name debian-t4 \
+  -v "$(pwd):/data" \
+  debian:12 \
+  sleep infinity
+
+docker ps -a
+
+docker exec -it centos-t4 bash -c 'echo "Файл создан внутри контейнера CentOS" > /data/centos-file.txt'
+docker exec -it centos-t4 sh -c 'echo "Файл создан внутри контейнера CentOS" > /data/centos-file.txt'
+
+echo "Файл создан на хостовой машине" > host-file.txt
+ls -l
+cat host-file.txt
+
+docker exec -it debian-t4 bash -c 'ls -l /data && echo "-----" && cat /data/centos-file.txt && echo "-----" && cat /data/host-file.txt'
+docker exec -it debian-t4 sh -c 'ls -l /data && echo "-----" && cat /data/centos-file.txt && echo "-----" && cat /data/host-file.txt'
+
+
+Вывод В ходе выполнения Задачи 4 было подтверждено, что bind mount через ключ -v "$(pwd):/data" работает корректно: файл, созданный внутри \
+контейнера centos-t4, появился в текущем каталоге хостовой машины; файл, созданный на хостовой машине, стал доступен внутри контейнера debian-t4; оба контейнера работают с одной и той же директорией хоста.
+
+
+
+
 
 
 ## Задача 5
