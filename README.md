@@ -203,3 +203,14 @@ services:
 
 
 ## Ответ 5
+
+
+<img width="1158" height="363" alt="image" src="https://github.com/user-attachments/assets/2593672c-50d4-476c-8ebd-3357e1f7e22a" />
+
+
+<img width="1687" height="507" alt="image" src="https://github.com/user-attachments/assets/e781de2d-95b1-48c0-b083-836fcd5034b5" />
+
+
+<img width="1700" height="630" alt="image" src="https://github.com/user-attachments/assets/95d48244-44c4-4d63-aed8-4dfb5a10dacb" />
+
+
